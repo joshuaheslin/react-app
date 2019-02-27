@@ -1,0 +1,34 @@
+import { Integration } from '@sentry/types/esm';
+/** JSDoc */
+export declare class Vue implements Integration {
+    /**
+     * @inheritDoc
+     */
+    name: string;
+    /**
+     * @inheritDoc
+     */
+    static id: string;
+    /**
+     * @inheritDoc
+     */
+    private readonly Vue;
+    /**
+     * When set to false, Sentry will suppress reporting all props data
+     * from your Vue components for privacy concerns.
+     */
+    private readonly attachProps;
+    /**
+     * @inheritDoc
+     */
+    constructor(options?: {
+        Vue?: any;
+        attachProps?: boolean;
+    });
+    /** JSDoc */
+    private formatComponentName;
+    /**
+     * @inheritDoc
+     */
+    setupOnce(): void;
+}
